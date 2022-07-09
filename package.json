@@ -1,24 +1,27 @@
 {
   "name": "deployer",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:etienne-dldc/deployer.git",
+  "author": "Etienne Deladonchamps <e.deladonchamps@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "next": "12.2.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@fastify/cookie": "^7.0.0",
+    "@fastify/type-provider-typebox": "^2.0.1",
+    "@sinclair/typebox": "^0.24.10",
+    "dotenv-flow": "^3.2.0",
+    "fastify": "^4.2.0",
+    "pino-pretty": "^8.1.0",
+    "tsx": "^3.7.1",
+    "zod": "^3.17.3"
+  },
+  "scripts": {
+    "start": "tsx ./src/boot.ts",
+    "dev": "tsx watch ./src/boot.ts"
   },
   "devDependencies": {
-    "@types/node": "18.0.3",
-    "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
-    "eslint": "8.19.0",
-    "eslint-config-next": "12.2.0",
-    "typescript": "4.7.4"
+    "@types/dotenv-flow": "^3.2.0",
+    "@types/node": "^18.0.3",
+    "typescript": "^4.7.4"
   }
 }
